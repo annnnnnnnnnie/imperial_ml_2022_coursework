@@ -25,10 +25,10 @@
     \section{Question 2}\label{sec:question-2}
 
     \subsection{Part 1}\label{subsec:part-12}
-    I used an on-policy \epsilon-greedy first-visit MC iterative learning to control algorithm to solve the problem.
-    \epsilon-greedy policy is used to allow for exploring the states, as the starting states are only part of the total states.
-    The hyperparameter \epsilon is set to 0.5 to allow for a certain degree of exploration.
-    TODO \epsilon is decreasing with number of episodes to satisfy the GLIE convergence condition.
+    I used an on-policy $\epsilon$-greedy first-visit MC iterative learning to control algorithm to solve the problem.
+    $\epsilon$-greedy policy is used to allow for exploring the states, as the starting states are only part of the total states.
+    The hyperparameter $\epsilon$ is set to 0.5 to allow for a certain degree of exploration.
+    TODO $\epsilon$ is decreasing with number of episodes to satisfy the GLIE convergence condition.
     The total number of episodes is set to 1000.
     This decision is guided by plotting total non-discounted reward vs episodes TODO.
     First-visit MC is chosen for its effectiveness and simplicity.
@@ -48,8 +48,8 @@
     blabla TODO
 
     \subsection{Part 5}\label{subsec:part-5}
-    varying \epsilon
-    varying \alpha
+    varying $\epsilon$
+    varying $\alpha$
     TODO
 
 
@@ -57,8 +57,8 @@
 
     \subsection{Part 1}\label{subsec:part-13}
     I used an on-policy TD learning to control algorithm to solve the problem.
-    The learning rate \alpha is set to 1e-2 and decreasing with respect to t to allow for convergence.
-    The choice of actions follows \epsilon-greedy with a decreasing \epsilon from initial value 0.5 to satisfy GLIE.
+    The learning rate $\alpha$ is set to 1e-2 and decreasing with respect to t to allow for convergence.
+    The choice of actions follows $\epsilon$-greedy with a decreasing $\epsilon$ from initial value 0.5 to satisfy GLIE.
     The assumption made is that the environment is stationary.
 
 \end{document}
