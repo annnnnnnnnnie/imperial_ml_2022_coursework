@@ -132,16 +132,17 @@
     I used an on-policy TD learning to control algorithm to solve the problem.
     The learning rate $\alpha$ is set to 1e-2 and decreasing with respect to t to allow for convergence.
     The choice of actions follows $\epsilon$-greedy with a decreasing $\epsilon$ from initial value 0.5 to satisfy GLIE.
+    The number of episodes is set to 4000 by plotting reward vs number of episodes.
     The assumption made is that the environment is stationary.
 
     \subsection{Part 2}\label{subsec:question-3-2}
     \begin{figure}[h]
         \begin{subfigure} {0.5\textwidth}
-            \includegraphics[width=0.9\linewidth]{images/mc_policy}
+            \includegraphics[width=0.9\linewidth]{images/td_policy}
             \caption{td policy}\label{fig:td_policy}
         \end{subfigure}
         \begin{subfigure} {0.5\textwidth}
-            \includegraphics[width=0.9\linewidth]{images/mc_value}
+            \includegraphics[width=0.9\linewidth]{images/td_value}
             \caption{td value}\label{fig:td_value}
         \end{subfigure}
     \end{figure}
@@ -154,10 +155,20 @@
     (Figure~\ref{fig:td_learning_curve})
 
     \subsection{Part 4}\label{subsec:question-3-4}
-    learning curve
-    varying $\epsilon$
-    varying $\alpha$
-    TODO
+    With different starting $\epsilon$s, the agent is able to reach convergence eventually, as the $\epsilon$ is decreasing.
+
+    With a small $\alpha$, the agent is unable to converge in the given number of episodes.
+    This is because that the agent learns slowly.
+    \begin{figure}[h]
+        \begin{subfigure} {0.5\textwidth}
+            \includegraphics[width=0.9\linewidth]{images/td_learning_curves_epsilon}
+            \caption{td learning curves for different epsilons}\label{fig:td_learning_curves_epsilon}
+        \end{subfigure}
+        \begin{subfigure} {0.5\textwidth}
+            \includegraphics[width=0.9\linewidth]{images/td_learning_curves_alphas}
+            \caption{td learning curves for different alphas}\label{fig:td_learning_curves_alphas}
+        \end{subfigure}
+    \end{figure}
 
 
     \section{Question 4}\label{sec:question-4}
